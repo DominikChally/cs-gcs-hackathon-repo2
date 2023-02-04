@@ -1,1 +1,24 @@
+.lists h2 {
+    text-align: center;
+}
 
+.lists div {
+    display: inline-block;
+    
+}
+.lists {
+    margin: 50px 150px 100px 100px;
+    
+    float: right;
+}
+
+.lists #grocery-list, #kitchen-list {
+    border-style: solid;
+    
+}
+section .lists {
+    float:inline-start;
+}
+section .side-bar2 {
+    margin-right: 0;  
+}
