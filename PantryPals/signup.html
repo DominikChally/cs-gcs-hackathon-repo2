@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Login</h2>
+      <form>
+        <div class="form-group">
+            <label for="username">Email:</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Confirm Password:</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+        <button id="login-btn" type="button" class="btn btn-primary">Submit</button>
+      </form>
+     
+    </div>
+
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      const email = document.getElementById("email");
+      const password = document.getElementById("pwd");
+      const username = document.getElementById("username");
+      const cPassword = document.getElementById("cPwd");
+  
+      function validateLogin() {
+        const Email = email.value;
+        const enteredUsername = username.value;
+        const enteredPassword = password.value;
+        const entCPwrd =cPassword.value
+  
+        if (enteredUsername === "admin" && enteredPassword === "password" && entCPwrd==enteredPassword) {
+          alert("Login successful!");
+        } else {
+          alert("Sign up failed. Do it again.");
+        }
+      }
+  
+      loginBtn.addEventListener("click", validateLogin);
+    </script>
+  </body>
+</html>
